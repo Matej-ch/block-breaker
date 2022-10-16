@@ -1,3 +1,1 @@
-###2D block breaker game
-
-WIP
+### 2D block breaker game

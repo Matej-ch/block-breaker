@@ -64,14 +64,25 @@ drawUser();
 grid.appendChild(user);
 
 function moveUser(e) {
-    switch (e.key) {
+    switch (e.code) {
         case 'ArrowLeft':
             if(currentPosition[0] > 0) {
                 currentPosition[0] -= 10;
                 drawUser()
             }
             break
-        case 'ArrowRight':
+        case 'ArrowRight'  || 'KeyD':
+            if(currentPosition[0] < boardWidth - blockWidth) {
+                currentPosition[0] += 10;
+                drawUser()
+            }
+            break
+        case 'KeyA':if(currentPosition[0] > 0) {
+            currentPosition[0] -= 10;
+            drawUser()
+        }
+            break
+        case 'KeyD':
             if(currentPosition[0] < boardWidth - blockWidth) {
                 currentPosition[0] += 10;
                 drawUser()
